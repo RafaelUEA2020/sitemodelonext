@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+.TextColorGold {
+  color: #FFD700
+}
+
+.TextColorSilver {
+  color: #C0C0C0
+}
+
+.bgColorSilver {
+  background-color: #c0c0c0;
+}
+
+.bgColorGold {
+  background-color: #FFD700;
+}
+
+.MenuDropDown {
+  animation: drop-down 1s;
+  transform: revert;
+}
+
+.bgGradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 215, 0, 1) 100%);
+}
+
+.borderConfig{
+  border: 8px solid white;
+  border-radius: 14px;
+  transition: 2s;
+  cursor: pointer;
+}
+
+.borderConfig:hover{
+  border: 8px solid white;
+  border-radius: 14px;
+  box-shadow: 18px 10px #FFD700;
+  transition: 2s;
+}
+
+@keyframes drop-down {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100px)
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
